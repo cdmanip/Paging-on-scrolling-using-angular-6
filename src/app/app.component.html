@@ -1,0 +1,16 @@
+<div style="text-align:center">
+  <h1>
+    {{ title }}!
+  </h1>
+  <div><h5>CHANDRAMANI PRASAD - HARMAN ASSIGNMENT</h5></div>
+  <mat-card>  
+    <div class="container">  
+      <div class="row" infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="50" (scrolled)="onScroll()" [scrollWindow]="false"  
+      style="height: 400px; overflow-y: scroll;">  
+        <div *ngFor="let item of photosList" class="col-md-4" style="margin-top: 10px;">  
+          <img style="height: 220px;width: 315px;" src="{{item.url}}" />  
+        </div>  
+      </div>  
+    </div>  
+  </mat-card>  
+</div>
